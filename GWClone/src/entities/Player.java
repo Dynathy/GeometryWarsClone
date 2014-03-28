@@ -133,7 +133,8 @@ public class Player extends GameEntity
 			Vector2 difference = mMousePosition.Minus(mPosition);
 			float angle = (float)Math.atan2(difference.Y, difference.X);
 			
-			for (float i = -1; i <= 1; i++)
+			for (float i = -2; i <= 2; i++)
+			//fires more bullets?
 			{
 				float deviation = (float)Math.PI / 32 * i;
 				mBulletList.add(new Bullet(mPosition, Vector2.FromAngle(angle + deviation).Times(30), this));
